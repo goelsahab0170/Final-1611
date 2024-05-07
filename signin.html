@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIGN IN</title>
+    <link rel="stylesheet" href="signin.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <div class="logo">
+          <img src="BLogo.png" alt="Logo" />
+          <p>Blogger Site</p>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="signin.html">Sign in</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="banner-section">
+        <div class="banner-image">
+          <img src="background image.jpg" alt="banner-image" />
+        </div>
+        <div id="login-container">
+          <div class="container">
+            <form onsubmit="login(event)">
+              <h2>SIGN-IN</h2>
+              <label for="username"><b>Username:</b></label>
+              <input
+                type="text"
+                id="username"
+                placeholder="Enter your email"
+              />
+
+              <label for="password"><b>Password:</b></label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+              />
+              <button onclick="login()">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function login() {
+        event.preventDefault();
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        
+
+        if (password.length < 8) {
+          alert("Password must contain at least 8 characters.");
+          return;
+        }
+        alert('Login successful!');
+
+        document.getElementById("login-container").style.display = "none";
+
+        window.location.href = "index.html";
+      }
+    </script>
+  </body>
+</html>

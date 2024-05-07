@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <div class="logo">
+          <img src="BLogo.png" alt="Logo" />
+          <p>Blogger Site</p>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#gallery-section">Gallery</a></li>
+            <li><a href="signin.html">Sign in</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="banner-section">
+        <div class="banner-image">
+          <img src="background image.jpg" alt="banner-image" />
+        </div>
+        <div class="banner-content">
+          <h1>This is my Blog site</h1>
+          <a href="button.html"
+            ><button><b>Create your blog</b></button></a
+          >
+        </div>
+      </div>
+      <div class="gallery" id="gallery-section">
+        <div class="Section">
+          <h2>Gallery Section</h2>
+        </div>
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Search..." oninput="filterGallery()">
+          </div>
+        </div>
+        <div class="gallery-section" >
+          <div class="content" data-category="The Poor Traveller">
+            <a href="https://www.thepoortraveler.net/" target="_blank"
+              ><div class="content-inner">
+                <h3>The Poor Traveller</h3>
+                <img src="poor traveller.jpg" alt="poor traveler" />
+                <p>
+                  Welcome to the Poor Traveler! When we started traveling, we
+                  made a lot of poor choices. We made a lot of mistakes. We had
+                  absolutely no clue how to plan a trip. We got lost all the
+                  time, got scammed all the time, and ended up spending way more
+                  than we should.
+                </p>
+              </div></a>
+          </div>
+
+          <div class="content" data-category="The kitchn">
+            <a href="https://www.thekitchn.com/" target="_blank"
+              ><div class="content-inner">
+                <h3>The kitchn</h3>
+                <img src="the kitchn.jpeg" alt="The kitchn" />
+                <p>
+                  The Kitchn delightfully inspires cooks and nourishes homes
+                  through daily recipes, tips, kitchen design, and shopping
+                  guides. It has a clean, minimalist design and uses white space
+                  to convey the message quickly and clearly.
+                </p>
+              </div></a
+            >
+          </div>
+
+          <div class="content" data-category="Going Zero Waste">
+            <a href="https://www.goingzerowaste.com/" target="_blank"
+              ><div class="content-inner">
+                <h3>Going Zero Waste</h3>
+                <img src="zero waste.jpg" alt="zero waste" />
+                <p>
+                  Going Zero Waste is an eco-friendly blog started by Kathryn
+                  Kellogg, an advocate for a plastic-free and sustainable
+                  lifestyle. She blogs about zero waste, and her site is a
+                  perfect place to start if you want to join this movement.
+                </p>
+              </div></a
+            >
+          </div>
+
+          <div class="content" data-category="The Phoblographer">
+            <a href="https://www.thephoblographer.com/" target="_blank"
+              ><div class="content-inner">
+                <h3>The Phoblographer</h3>
+                <img src="phoblographer.jpg" alt="phoblographer" />
+                <p>
+                  The Phoblographer is an ultimate photography blog that
+                  contains everything amateurs and professionals need to know.
+                  The site features useful gear reviews, inspiration,
+                  educational articles, and more.
+                </p>
+              </div></a
+            >
+          </div>
+        </div>
+        <button id="scrollToTopBtn" onclick="scrollToTop()">
+          <img src="b.jpg" alt="TOP" width="50" height="50" />
+        </button>
+
+        <div class="box">
+          <div class="footer">
+            <div class="row">
+              <div class="footer-col">
+                <h4>About us</h4>
+                <ul>
+                  <li><a href="services.html">our services</a></li>
+                  <li><a href="privacy.html">privacy policy</a></li>
+                  <li>
+                    <a href="https://www.thepoortraveler.net/" target="_blank"
+                      >our best blog</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                  <li><a href="FAQ.HTML">FAQ</a></li>
+                  <li><a href="help.html">Help Center</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>Contact us</h4>
+                <ul>
+                  <li><a href="#">+91 1234567890</a></li>
+                  <li>
+                    <a
+                      href="https://mail.google.com/mail/u/2/#inbox"
+                      target="_blank"
+                      >blog9463@gmail.com</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>Follow us</h4>
+                <div class="social-links">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61554204868987&is_tour_dismissed=true"
+                    target="_blank"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a href="https://twitter.com/Blog9463Blog" target="_blank"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a
+                    href="https://www.instagram.com/blogger96545/"
+                    target="_blank"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a
+                    href="https://in.linkedin.com/"
+                    target="_blank"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

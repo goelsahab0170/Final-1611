@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>create blog</title>
+    <link rel="stylesheet" href="button.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <class="container">
+      <div class="nav">
+        <div class="logo">
+          <img src="BLogo.png" alt="Logo" />
+          <p>Blogger Site</p>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Gallery</a></li>
+            <li><a href="signin.html">Sign in</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="banner-section">
+        <div class="banner-image">
+          <img src="background image.jpg" alt="banner-image" />
+        </div>
+        
+        <div class="heading">
+          <form id="postForm">
+            <input type="text" placeholder="Enter Your Blog Heading" id="heading" required>
+          </form>
+        </div>
+        <div class="heading-inner">
+          <input type="text" textarea id ="description" placeholder="Type Here" />
+          <button type="button" onclick="addPost()">POST</button>
+          
+        
+          </div>
+      </div>
+          <div class="table-inner">
+            <table id="postTable">
+              <thead>
+                <tr>
+                  <th>Sr. No.</th>
+                  <th>Blog Heading</th>
+                  <th>Your Blog Content</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+          
+          
+          
+        
+      </div>
+      <div class="box">
+        <div class="footer">
+          <div class="row">
+            <div class="footer-col">
+              <h4>About us</h4>
+              <ul>
+                <li><a href="services.html">our services</a></li>
+                <li>
+                  <a href="privacy.html" target="_blank">privacy policy</a>
+                </li>
+                <li><a href="https://www.thepoortraveler.net/">our best blog</a></li>
+                
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>get help</h4>
+              <ul>
+                <li><a href="FAQ.HTML" target="_blank">FAQ</a></li>
+                <li><a href="help.html">Help Center</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Contact us</h4>
+              <ul>
+                <li><a href="#">+91 1234567890</a></li>
+                <li>
+                  <a
+                    href="https://mail.google.com/mail/u/2/#inbox"
+                    target="_blank"
+                    >blog9463@gmail.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Follow us</h4>
+              <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61554204868987&is_tour_dismissed=true" target="_blank"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="https://twitter.com/Blog9463Blog" target="_blank"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="https://www.instagram.com/blogger96545/" target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="https://www.linkedin.com/in/blog-undefined-72734b2a2/" target="_blank"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        function addPost() {
+
+    var heading = document.getElementById('heading').value;
+    var description = document.getElementById('description').value;
+
+    if (heading && description) {
+    var table = document.getElementById('postTable').getElementsByTagName('tbody')[0];
+    var newRow = table.insertRow(table.rows.length);
+
+    var cell1 = newRow.insertCell(0);
+    var cell2 = newRow.insertCell(1);
+    var cell3 = newRow.insertCell(2);
+
+    cell1.innerHTML = table.rows.length;
+    cell2.innerHTML = heading;
+    cell3.innerHTML = description;
+
+    document.getElementById('heading').value = '';
+    document.getElementById('description').value = '';
+  } else{
+    alert("Please fill in all the fields.");
+  }
+        }
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+  * {
+  padding: 0;
+  margin: 0;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+.nav .logo {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.nav .logo img {
+  width: 60px;
+  margin: 0 15px 0 0;
+}
+.nav .logo p {
+  font-size: 30px;
+}
+.nav .menu {
+  width: 40%;
+}
+.nav .menu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.nav .menu ul li {
+  list-style: none;
+}
+.nav .menu ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.nav .menu ul li a:hover {
+  text-decoration: underline;
+  color: lightgray;
+}
+.banner-image img {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+  position: relative;
+}
+.banner-section {
+  position: relative;
+  text-align: left;
+}
+.div-container {
+  width: 320px;
+  padding: 10px;
+  margin: 0;
+}
+form {
+  position: absolute;
+  top: 20%;
+  left: 23%;
+  background: #00000045;
+  border: none;
+  padding: 30px;
+  border-radius: 20px;
+}
+form h2 {
+  color: #fff;
+  text-align: center;
+}
+
+#login-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  box-sizing: border-box;
+}
+label {
+  color: #fff;
+}
+button {
+  background-color:#007bff;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 4px;
+}
+button:hover {
+  opacity: 0.8;
+  background-color: #0056b3;
+}
+#profile-container {
+  display: none;
+  margin-top: 20px;
+}

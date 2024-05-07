@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Post Typing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+
+    table {
+      width: 80%;
+      margin: 20px auto;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    table, th, td {
+      border-collapse: collapse;
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    
+    }
+    
+
+    footer {
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      padding: 10px;
+      margin-top: auto;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+<form id="postForm">
+  <label for="heading">Heading:</label>
+  <input type="text" id="heading" required>
+
+  <label for="description">Description:</label>
+  <textarea id="description" rows="4" required></textarea>
+
+  <button type="button" onclick="addPost()">POST</button>
+</form>
+
+<table id="postTable">
+  <thead>
+    <tr>
+      <th>Heading</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+<footer>
+  <p>&copy; 2023 Blog Post Typing</p>
+</footer>
+
+<script>
+  function addPost() {
+    var heading = document.getElementById('heading').value;
+    var description = document.getElementById('description').value;
+
+    // Create a new row in the table
+    var table = document.getElementById('postTable').getElementsByTagName('tbody')[0];
+    var newRow = table.insertRow(table.rows.length);
+
+    // Insert cells in the row
+    var cell1 = newRow.insertCell(0);
+    var cell2 = newRow.insertCell(1);
+
+    // Set values in the cells
+    cell1.innerHTML = heading;
+    cell2.innerHTML = description;
+
+    // Clear input fields
+    document.getElementById('heading').value = '';
+    document.getElementById('description').value = '';
+  }
+</script>
+
+</body>
+</html>
